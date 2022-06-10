@@ -1,2 +1,2 @@
 # feature-creature
-Feature specification and testing toolkit
+> Feature specification and testing toolkit
