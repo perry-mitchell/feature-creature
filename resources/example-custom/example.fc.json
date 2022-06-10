@@ -1,0 +1,8 @@
+{
+    "mappings": [
+        {
+            "featurePattern": ["\\(([^\\(\\)]+)\\)", 1],
+            "specPattern": "FEAT-\\d+"
+        }
+    ]
+}
