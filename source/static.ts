@@ -1,5 +1,7 @@
+import chalk from "chalk";
+
 const HELP = `
-Feature Creature
+${chalk.bold.blue("Feature Creature")}
 
     Feature specification and testing library, designed to help ensure that all
     application features are documented, tested and reported on. Use FC to process
@@ -10,7 +12,14 @@ Feature Creature
 
     FC is a command-line utility:
 
-        feature --config=fc.json --spec=features.md --report=dist/coverage.html
+        feature test --config=fc.json --spec=features.md
+            --report=dist/coverage.html
+
+    It supports the following commands:
+
+        ${chalk.bold("test")}                    Run the markdown processor to extract features,
+                                and then compare then against the test results
+                                from a tool such as Mocha.
 
     It supports the following flags:
 

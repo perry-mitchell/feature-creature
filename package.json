@@ -3,12 +3,17 @@
   "version": "0.0.0",
   "description": "Feature specification and testing toolkit",
   "main": "dist/index.js",
+  "type": "module",
   "scripts": {
-    "build": "run-s clean build:version build:ts",
+    "build": "run-s clean build:version build:ts build:exec",
+    "build:exec": "chmod ug+x ./dist/index.js",
     "build:ts": "tsc",
     "build:version": "node ./resources/version.cjs",
     "clean": "rimraf dist",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "feature": "./dist/index.js"
   },
   "repository": {
     "type": "git",
@@ -28,8 +33,9 @@
   "homepage": "https://github.com/perry-mitchell/feature-creature#readme",
   "dependencies": {
     "chalk": "^5.0.1",
-    "marked": "^4.0.16",
-    "minimist": "^1.2.6"
+    "minimist": "^1.2.6",
+    "remark-parse": "^10.0.1",
+    "unified": "^10.1.2"
   },
   "devDependencies": {
     "@types/minimist": "^1.2.2",
